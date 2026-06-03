@@ -1,48 +1,50 @@
-# 修仙 RPG · Cultivation RPG
+# Cultivation RPG
 
-键盘鼠标 **修仙主题** 挂机修炼游戏。打字 = 灵力，鼠标点击 = 炼丹，鼠标移动 = 身法，活跃时间 = 神识。在线排行榜。
+[中文文档](./README_CN.md)
 
-## 功能
+Keyboard & mouse idle cultivation game. Type to gain Spirit, click to Alchemy, move for Agility, stay active for Wisdom. Online leaderboard.
 
-- 全局键盘/鼠标钩子，静默采集
-- 8 个修仙境界（练气→飞升），彩色进度条
-- 四维属性（灵力/身法/神识/炼丹）+ 修为
-- 今日修炼统计
-- 在线排行榜（Supabase，10 秒同步）
-- 重生功能，清空数据从头再来
-- 系统托盘，关闭窗口后台运行
+## Features
 
-## 快速开始
+- Global keyboard/mouse hooks, silent background tracking
+- 8 cultivation realms (Qi Refining → Ascension) with progress bar
+- 4 stats (Spirit/Agility/Wisdom/Alchemy) + total XP
+- Today's cultivation summary
+- Online leaderboard (Supabase, syncs every 10s)
+- Rebirth — reset and start over
+- System tray — runs in background
+
+## Quick Start
 
 ```bash
 cd CultivationRPG
 dotnet run
 ```
 
-## 技术栈
+## Tech Stack
 
 C# .NET 9 + WPF · SQLite · Supabase · LiveCharts2 · Win32 Hooks
 
-## 境界
+## Realms
 
-| 境界 | XP |
+| Realm | XP |
 |------|-----|
-| 练气 | 0 |
-| 筑基 | 1万 |
-| 金丹 | 5万 |
-| 元婴 | 20万 |
-| 化神 | 100万 |
-| 渡劫 | 500万 |
-| 大乘 | 2000万 |
-| 飞升 | 1亿 |
+| Qi Refining | 0 |
+| Foundation | 10K |
+| Golden Core | 50K |
+| Nascent Soul | 200K |
+| Spirit Severing | 1M |
+| Tribulation | 5M |
+| Mahayana | 20M |
+| Ascension | 100M |
 
-## 属性
+## Stats
 
-| 属性 | 来源 | 系数 |
-|------|------|------|
-| 灵力 | 按键 | 1:1 |
-| 身法 | 鼠标移动 | 像素/1000 |
-| 炼丹 | 点击 | 1:1 |
-| 神识 | 活跃(分) | 1:1 |
+| Stat | Source | Ratio |
+|------|--------|-------|
+| Spirit | Keystrokes | 1:1 |
+| Agility | Mouse (px) | /1000 |
+| Alchemy | Clicks | 1:1 |
+| Wisdom | Active (min) | 1:1 |
 
-修为 = 四项总和
+XP = sum of all four.
